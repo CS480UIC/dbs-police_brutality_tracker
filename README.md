@@ -6,6 +6,7 @@
 police_brutality_tracker
 # Author(s)
 Aaron Carlson
+Mike Gibson
 AUTHOR2
 # Database description
 This database will be oriented around the concept of a public place for reporting officers involved in police brutality
