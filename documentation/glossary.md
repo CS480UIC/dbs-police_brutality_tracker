@@ -5,7 +5,7 @@ Entity List:
             Spike_Strips, PIT_Manuver, Ramming.
   Description: This entity modesl the type of force used by the officer and how it was used.
 
-2. Police Officer
+2. Police_Officer
    Attrinutes: Name, ID, Rank, Department, Experience(Years)
    Synonyms: Patrol_Officer, SWAT, K9_Handler, Detective, Undercover.
    Description: This is the type of police officer.
@@ -20,6 +20,11 @@ Entity List:
    Attributes: Name, ID, Ethnicity, Home, Gender.
    Synonyms: None.
    Description: This is the suspect who the use of force was used upon.
+
+5. User_Login
+   Attributes: Username, Pasword.
+   Synonyms: None.
+   Description: This is the user login data for the database.
 
 Relationships:
 1. Police Officer-Force Type
