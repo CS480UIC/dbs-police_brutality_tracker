@@ -37,9 +37,10 @@ Dependent Entities:
 3. victim
    Relationship: victim_id-victim
    Rules/Actions: ON DELETE CASCADE, RESTRICT victim_id
-4. rported_by
+4. reported_by
    Relationship: user_id-reported_by
    Rules/Actions: ON DELETE CASCADE, RESTRICT user_id
+
 Relationships:
 1. Police Officer-Force Type
    Minumum: One-One
