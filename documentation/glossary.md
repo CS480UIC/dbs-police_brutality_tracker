@@ -1,28 +1,28 @@
 Entity List:
 1. Force Type
-  Attributes: Name (NOT NULL), ID (NOT NULL), Description (NULL)
+  Attributes: Name (NOT NULL) VARCHAR(60), ID (NOT NULL) INT, Description (NULL) VARCHAR(200)
   Synonyms: Fist_Melee, Physical Takedown, GrabOrHold, Taser, Less_Lethal, Lethal
             Spike_Strips, PIT_Manuver, Ramming.
   Description: This entity modesl the type of force used by the officer and how it was used.
 
 2. Police_Officer
-   Attrinutes: Name (NOT NULL), ID (NOT NULL), Rank (NOT NULL), Department (NOT NULL), Experience(Years) (NOT NULL)
+   Attrinutes: Name (NOT NULL) VARCHAR(60), ID (NOT NULL) INT, Rank (NOT NULL) VARCHAR(60), Department (NOT NULL) VARCHAR(60), Experience(Years) (NOT NULL) INT
    Synonyms: Patrol_Officer, SWAT, K9_Handler, Detective, Undercover.
    Description: This is the type of police officer.
 
 3. Infractions
-   Attributes: ID (NOT NULL), Date (NOT NULL), Officer (NOT NULL), Force_Type (NOT NULL), Suspect (NOT NULL).
+   Attributes: ID (NOT NULL) INT, Date (NOT NULL) DATE, Officer (NOT NULL) VARCHAR(60), Force_Type (NOT NULL) VARCHAR(60), Suspect (NOT NULL) VARCHAR(60).
    Synonyms: Assault, Battery, Theift, Robbery, PennyTheft, GrandTheftAuto,
              Murder, CapitalMurder, etc.
    Description: This represents what law was broken by the suspect.
 
 4. Suspect (Note on the ER diagram this is labeled as victims)
-   Attributes: Name (NOT NULL), ID (NOT NULL), Ethnicity (NOT NULL), Home (NULL), Gender (NOT NULL).
+   Attributes: Name (NOT NULL) VARCHAR(60), ID (NOT NULL) INT, Ethnicity (NOT NULL) VARCHAR(60), Home (NULL) VARCHAR(60), Gender (NOT NULL) VARCHAR(60).
    Synonyms: None.
    Description: This is the suspect who the use of force was used upon.
 
 5. User_Login
-   Attributes: Username (NOT NULL), Pasword (NOT NULL).
+   Attributes: Username (NOT NULL) VARCHAR(60), Pasword (NOT NULL) VARCHAR(60).
    Synonyms: None.
    Description: This is the user login data for the database.
    
