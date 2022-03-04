@@ -16,7 +16,7 @@ Entity List:
              Murder, CapitalMurder, etc.
    Description: This represents what law was broken by the suspect.
 
-4. Suspect
+4. Suspect (Note on the ER diagram this is labeled as victims)
    Attributes: Name (NOT NULL), ID (NOT NULL), Ethnicity (NOT NULL), Home (NULL), Gender (NOT NULL).
    Synonyms: None.
    Description: This is the suspect who the use of force was used upon.
