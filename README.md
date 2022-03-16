@@ -27,8 +27,9 @@ The idea is to study the type of violence that occurs, and understand how and wh
 <img width="228" alt="POc" src="https://user-images.githubusercontent.com/77817564/158549033-830a13bb-0ee0-4672-a7f9-d84d268dc73d.png">
 <img width="227" alt="POd" src="https://user-images.githubusercontent.com/77817564/158549061-2ae027bb-5db4-4eb2-9fce-09fecfa895c9.png">
 <img width="216" alt="poR" src="https://user-images.githubusercontent.com/77817564/158549090-cebfe0e0-ae78-4c8b-b96d-9af1685c005a.png">
-<img width="228" alt="poU" src="https://user-images.githubusercontent.com/77817564/158549099-41c6a02b-13b6-4735-9b36-a57c5cdf04af.png">
+<img width="237" alt="poU" src="https://user-images.githubusercontent.com/77817564/158549909-86f3340e-9f2f-4596-a830-52ace91e77a9.png">
 <img width="203" alt="vC" src="https://user-images.githubusercontent.com/77817564/158549161-7505d5a1-57b3-4608-8a36-7496f594c139.png">
 <img width="222" alt="vD" src="https://user-images.githubusercontent.com/77817564/158549176-51f6d78f-ebfd-4e6c-b429-e041a3117a2d.png">
 <img width="191" alt="vR" src="https://user-images.githubusercontent.com/77817564/158549192-c0505731-5c82-4450-9f2d-c4292bf1988f.png">
-<img width="223" alt="vU" src="https://user-images.githubusercontent.com/77817564/158549210-766da4c0-91f6-44a7-906d-c99358b364f4.png">
+<img width="226" alt="vU" src="https://user-images.githubusercontent.com/77817564/158549928-81402944-d0c9-48dc-90e6-b480c2155e4c.png">
+
