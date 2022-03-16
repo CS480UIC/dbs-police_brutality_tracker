@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Update police_officers</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +22,12 @@
   </head>
   
   <body>
-  <h1>Update police_officers</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update officer_id   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	<input type="submit" value="Update Entity1"/>
-</form>
+    <h1>CRUD operations for Force Type </h1>
+    <br>
+	<a href="<c:url value='/jsps/force_type/forcetypescreate.jsp'/>" target="_parent">Create Force</a> |&nbsp; 
+	<a href="<c:url value='/jsps/force_type/forcetypesread.jsp'/>" target="_parent">Read Force</a> |&nbsp;
+	<a href="<c:url value='/jsps/force_type/forcetypesupdate.jsp'/>" target="_parent">Update Force</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/force_type/forcetypesdelete.jsp'/>" target="_parent">Delete Force</a>	
+	    
   </body>
 </html>

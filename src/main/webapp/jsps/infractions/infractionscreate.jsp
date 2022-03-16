@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>victims Create</title>
+    <title>Entity1 Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,24 +21,33 @@
   </head>
   
   <body>
-  <h1>victims Create</h1>
+  <h1>Create Force</h1>
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	victim_name    :<input type="text" name="username" value="${form.username }"/>
+	infraction_id    :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	victim_id：<input type="password" name="password" value="${form.password }"/>
+	date：<input type="text" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	ethnicity	：<input type="text" name="email" value="${form.email }"/>
+	officer_involved：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	gender	：<input type="text" name="email" value="${form.email }"/>
+	force_type：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	address	：<input type="text" name="email" value="${form.email }"/>
+	victim：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<input type="submit" value="Create victims"/>
+	reported_by：<input type="text" name="email" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/>
+	location：<input type="text" name="email" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/>
+	description：<input type="text" name="email" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/>
+	<input type="submit" value="Create Force_Type"/>
 </form>
   </body>
 </html>

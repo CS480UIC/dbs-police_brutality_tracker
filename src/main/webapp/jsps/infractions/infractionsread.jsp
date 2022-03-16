@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>victims Create</title>
+    <title>Read Entity1</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,24 +21,20 @@
   </head>
   
   <body>
-  <h1>victims Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	victim_name    :<input type="text" name="username" value="${form.username }"/>
+  <h1>Read Entity1</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
+<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+	<input type="hidden" name="method" value="regist"/>
+	infraction_id    :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	victim_id：<input type="password" name="password" value="${form.password }"/>
+<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	ethnicity	：<input type="text" name="email" value="${form.email }"/>
+	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	gender	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	address	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	<input type="submit" value="Create victims"/>
+	<br/> --%>
+	<input type="submit" value="Read Entity1"/>
 </form>
   </body>
 </html>

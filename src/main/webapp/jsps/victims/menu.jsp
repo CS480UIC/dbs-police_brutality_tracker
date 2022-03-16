@@ -22,7 +22,7 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Entity1 </h1>
+    <h1>CRUD operations for victims </h1>
     <br>
 	<a href="<c:url value='/jsps/victims/victimscreate.jsp'/>" target="_parent">Create victims</a> |&nbsp; 
 	<a href="<c:url value='/jsps/victims/victimsread.jsp'/>" target="_parent">Read victims</a> |&nbsp;

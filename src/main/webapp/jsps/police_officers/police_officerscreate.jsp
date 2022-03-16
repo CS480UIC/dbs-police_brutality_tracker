@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Entity1 Create</title>
+    <title>police_officers Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -35,7 +35,7 @@
 	rank	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<input type="submit" value="Create Entity1"/>
+	<input type="submit" value="Create police_officers"/>
 </form>
   </body>
 </html>
