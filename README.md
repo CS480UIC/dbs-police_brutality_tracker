@@ -24,10 +24,12 @@ The idea is to study the type of violence that occurs, and understand how and wh
 ![image](https://user-images.githubusercontent.com/77476938/158544628-29d82bf2-6767-4343-abe1-721ec42cb078.png) </br>
 ![image](https://user-images.githubusercontent.com/77476938/158544699-1de3f974-5d86-4f2e-a96e-a9658eb344ea.png) </br>
 ![image](https://user-images.githubusercontent.com/77476938/158544800-e8bf9324-402c-47dd-8283-1d288ff1b5d1.png) </br>
+<img width="462" alt="poCRUD" src="https://user-images.githubusercontent.com/77817564/158550252-fcf27662-4996-4a68-947e-d83a2c1ead6c.png">
 <img width="228" alt="POc" src="https://user-images.githubusercontent.com/77817564/158549033-830a13bb-0ee0-4672-a7f9-d84d268dc73d.png">
 <img width="227" alt="POd" src="https://user-images.githubusercontent.com/77817564/158549061-2ae027bb-5db4-4eb2-9fce-09fecfa895c9.png">
 <img width="216" alt="poR" src="https://user-images.githubusercontent.com/77817564/158549090-cebfe0e0-ae78-4c8b-b96d-9af1685c005a.png">
 <img width="237" alt="poU" src="https://user-images.githubusercontent.com/77817564/158549909-86f3340e-9f2f-4596-a830-52ace91e77a9.png">
+<img width="320" alt="vCRUD" src="https://user-images.githubusercontent.com/77817564/158550281-9b3efd5b-163a-47de-ac6e-59782939e1d7.png">
 <img width="203" alt="vC" src="https://user-images.githubusercontent.com/77817564/158549161-7505d5a1-57b3-4608-8a36-7496f594c139.png">
 <img width="222" alt="vD" src="https://user-images.githubusercontent.com/77817564/158549176-51f6d78f-ebfd-4e6c-b429-e041a3117a2d.png">
 <img width="191" alt="vR" src="https://user-images.githubusercontent.com/77817564/158549192-c0505731-5c82-4450-9f2d-c4292bf1988f.png">
