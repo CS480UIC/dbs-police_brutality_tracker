@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Update</h1>
+  <h1>Update Infractions</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update infraction_id   :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	<input type="submit" value="Update Infractions"/>
 </form>
   </body>
 </html>

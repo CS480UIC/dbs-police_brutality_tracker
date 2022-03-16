@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Create Force</h1>
+  <h1>Create Infraction</h1>
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
 	infraction_id    :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
@@ -47,7 +47,7 @@
 	description：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<input type="submit" value="Create Force_Type"/>
+	<input type="submit" value="Create Infraction"/>
 </form>
   </body>
 </html>
