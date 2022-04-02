@@ -1,0 +1,6 @@
+Timestamp,victim_name,victim_id (PK),ethnicity,gender,address
+3/3/2022 23:33:01,John Cena,1,white,male,2981 Saint Marys Avenue
+3/3/2022 23:33:21,Herbert Hoover,2,white,male,2094 Hinkle Deegan Lake Road
+3/3/2022 23:33:38,Jill Biden,3,,female,1735 Brookview Drive
+3/3/2022 23:33:50,Aaron Carlson,4,white,male,4742 Alpaca Way
+3/3/2022 23:34:02,Anon E. Mouse,5,,female,372 Mount Olive Road
