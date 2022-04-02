@@ -1,0 +1,6 @@
+Timestamp,force,force_id (PK),description
+3/3/2022 23:30:52,firearm,1,use of firearm
+3/3/2022 23:31:08,mace,2,use of pepper spray / mace
+3/3/2022 23:31:42,physical assault,3,"use of fists, legs and other parts of body to cause damage"
+3/3/2022 23:32:16,melee weapon,4,use of object such as baton to hit or strike person
+3/3/2022 23:32:33,vehicle,5,use of vehicle to hit or strike person

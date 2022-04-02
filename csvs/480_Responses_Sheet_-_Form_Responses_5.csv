@@ -1,0 +1,6 @@
+Timestamp,infraction_id (PK),date,officer_involved,force_type,victim,reported_by,location,description
+3/3/2022 23:36:17,1,4/1/2022,1,1,1,1,1432 Grove Street,Lorem ipsum dolor sit amet
+3/3/2022 23:36:25,2,8/12/2021,2,2,2,2,579 Oakridge Lane,consectetur adipiscing elit
+3/3/2022 23:36:39,3,6/8/2003,3,3,3,3,2873 John Calvin Drive,sed do eiusmod tempor
+3/3/2022 23:36:50,4,1/19/2011,4,4,4,4,77 Ocala Street,incididunt ut labore et dolore magna aliqua
+3/3/2022 23:37:11,5,4/20/1969,5,5,5,5,2981 Saint Marys Avenue,Ut enim ad minim veniam
