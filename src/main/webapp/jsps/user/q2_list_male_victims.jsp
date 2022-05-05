@@ -19,8 +19,11 @@
 	</tr>
 <c:forEach items="${UserList}" var="user">
 	<tr>
-		<td>${user.username}</td>
-		<td>${user.email}</td>
+		<td>${user.victim_id}</td>
+		<td>${user.victim_name}</td>
+		<td>${user.ethnicity}</td>
+		<td>${user.gender}</td>
+		<td>${user.address}</td>
 	</tr>
 </c:forEach>
 </table>

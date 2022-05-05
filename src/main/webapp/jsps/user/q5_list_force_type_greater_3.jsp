@@ -15,8 +15,7 @@
 	</tr>
 <c:forEach items="${UserList}" var="user">
 	<tr>
-		<td>${user.username}</td>
-		<td>${user.email}</td>
+		<td>${user.force_type}</td>
 	</tr>
 </c:forEach>
 </table>
