@@ -11,8 +11,18 @@
 	<h3 align="center"> User Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>name</th>
-		<th>email</th>
+		<th>Infraction ID</th>
+		<th>Date</th>
+		<th>Officer Involved ID</th>
+		<th>Force Type ID</th>
+		<th>Victim ID</th>
+		<th>Reported By User ID</th>
+		<th>Location</th>
+		<th>Description</th>
+		<th>Victim Name</th>
+		<th>Ethnicity</th>
+		<th>Gender</th>
+		<th>Address</th>
 	</tr>
 <c:forEach items="${UserList}" var="user">
 	<tr>

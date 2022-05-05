@@ -37,16 +37,16 @@ public class UserDao {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
-		    String sql = "select * from user where username=?";
+		    String sql = "select * from users where user_name=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,username);
 		    ResultSet resultSet = preparestatement.executeQuery();
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
+		    	String user_name = resultSet.getString("user_name");
 		    	if(user_name.equals(username)){
-		    		user.setUsername(resultSet.getString("username"));
-		    		user.setPassword(resultSet.getString("password"));
-		    		user.setEmail(resultSet.getString("email"));
+		    		user.setUsername(resultSet.getString("user_name"));
+		    		user.setPassword(resultSet.getString("user_password_hash"));
+		    		//user.setEmail(resultSet.getString("email"));
 		    		
 		    	}
 		    }
@@ -69,11 +69,11 @@ public class UserDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
 			
-			String sql = "insert into user values(?,?,?)";
+			String sql = "insert into users (user_name, user_password_hash) values(?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,user.getUsername());
 		    preparestatement.setString(2,user.getPassword());
-		    preparestatement.setString(3,user.getEmail());
+		    //preparestatement.setString(3,user.getEmail());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -87,14 +87,14 @@ public class UserDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
-			String sql = "select * from user";
+			String sql = "select * from users";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
 				User user = new User();
-				user.setUsername(resultSet.getString("username"));
-	    		user.setPassword(resultSet.getString("password"));
-	    		user.setEmail(resultSet.getString("email"));
+				user.setUsername(resultSet.getString("user_name"));
+	    		user.setPassword(resultSet.getString("user_password_hash"));
+	    		//user.setEmail(resultSet.getString("email"));
 	    		list.add(user);
 			 }
 			connect.close();

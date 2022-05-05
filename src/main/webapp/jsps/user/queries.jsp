@@ -24,8 +24,22 @@
   <body>
     <h1>Welcome to the Demo</h1>
     <br>
-    <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
- 
+    <a href="<c:url value='/findAll'/>" target="body">Please list all the chicago police officers in the table</a>&nbsp;&nbsp;
+ 	<br/>
+ 	<a href="<c:url value='/findAll'/>" target="body">Please list all the male victims in the table</a>&nbsp;&nbsp;
+ 	<br/>
+ 	<a href="<c:url value='/findAll'/>" target="body">Please list all the addresses in the table</a>&nbsp;&nbsp;
+ 	<br/>
+ 	<a href="<c:url value='/findAll'/>" target="body">Please list how many infractions occured today in the table</a>&nbsp;&nbsp;
+ 	<br/>
+ 	<a href="<c:url value='/findAll'/>" target="body">Please list all the force types involved in 3 or more infractions in the table</a>&nbsp;&nbsp;
+ 	<br/>
+ 	<a href="<c:url value='/findAll'/>" target="body">Please list all the infractions with an address tied to them in the table</a>&nbsp;&nbsp;
+ 	<br/>
+ 	<a href="<c:url value='/findAll'/>" target="body">Please list all the infractions with a known victim in the table</a>&nbsp;&nbsp;
+ 	<br/>
+ 	<a href="<c:url value='/findAll'/>" target="body">Please list the amount of force types that appear twice or more in the table</a>&nbsp;&nbsp;
+ 	
     
   </body>
 </html>
