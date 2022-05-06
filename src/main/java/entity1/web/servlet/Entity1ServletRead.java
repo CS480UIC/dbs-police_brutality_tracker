@@ -1,4 +1,4 @@
-package infractions.web.servlet;
+package entity1.web.servlet;
 
 import java.io.IOException;
 
@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import infractions.dao.IEntityDao;
-import infractions.domain.IEntity;
+import entity1.dao.Entity1Dao;
+import entity1.domain.Entity1;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class IEntityServletRead extends HttpServlet {
+public class Entity1ServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IEntityServletRead() {
+    public Entity1ServletRead() {
         super();
     }
     
@@ -37,12 +37,11 @@ public class IEntityServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		IEntity IEntity = null;
-		IEntityDao entity1Dao = new IEntityDao();
-		System.out.println("asdf");
+		Entity1 entity1 = null;
+		Entity1Dao entity1Dao = new Entity1Dao();
 		
 		try {
-			IEntity = entity1Dao.findByID(request.getParameter("infractions_id"));
+			entity1 = entity1Dao.findByUsername(request.getParameter("username"));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -51,14 +50,14 @@ public class IEntityServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(!IEntity.getInfractionID().equals(null)) {
-					System.out.println(IEntity);
-					request.setAttribute("infractions", IEntity);
-					request.getRequestDispatcher("/jsps/infractions/infractions_read_output.jsp").forward(request, response);
+		if(entity1.getUsername()!=null){
+					System.out.println(entity1);
+					request.setAttribute("entity1", entity1);
+					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 			}
 			else{
 			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/infractions/infractions_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 		}
 	}
 }

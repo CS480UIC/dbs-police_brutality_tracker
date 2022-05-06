@@ -126,6 +126,27 @@
     <url-pattern>/UserServletLogout</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>IEntityServletCreate</display-name>
+    <servlet-name>IEntityServletCreate</servlet-name>
+    <servlet-class>infractions.web.servlet.IEntityServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IEntityServletCreate</servlet-name>
+    <url-pattern>/IEntityServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>IEntityServletRead</display-name>
+    <servlet-name>IEntityServletRead</servlet-name>
+    <servlet-class>infractions.web.servlet.IEntityServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IEntityServletRead</servlet-name>
+    <url-pattern>/IEntityServletRead</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>

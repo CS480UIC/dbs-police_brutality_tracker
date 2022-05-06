@@ -1,4 +1,4 @@
-package infractions.web.servlet;
+package force_type.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,23 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import infractions.domain.IEntity;
-import infractions.dao.IEntityDao;
-import entity1.service.Entity1Exception;
-import entity1.service.Entity1Service;
+import force_type.domain.force_type;
+import force_type.service.force_typeException;
+import force_type.service.force_typeService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class IEntityServletCreate extends HttpServlet {
+public class Entity1ServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IEntityServletCreate() {
+    public Entity1ServletCreate() {
         super();
     }
 
@@ -42,30 +41,24 @@ public class IEntityServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1Service entity1service = new Entity1Service();
+		force_typeService entity1service = new force_typeService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		IEntity form = new IEntity();
+		force_type form = new force_type();
 		List<String> info = new ArrayList<String>();
 
 		for(String name : paramMap.keySet()) {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setInfractionID(info.get(0));
-		form.setInfractionDate(info.get(1));
-		form.setInfractionOfficer(info.get(2));
-		form.setInfractionForce(info.get(3));
-		form.setInfractionVictim(info.get(4));
-		form.setInfractionReporter(info.get(5));
-		form.setInfractionLocation(info.get(6));
-		form.setInfractionDesc(info.get(7));
-		//form.setInfractionCount(info.get(8));
+		form.setUsername(info.get(0));
+		form.setPassword(info.get(1));
+		form.setEmail(info.get(2));		
 		
 		try {
 			entity1service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | Entity1Exception e) {
+		} catch (ClassNotFoundException | force_typeException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
 			e.printStackTrace();

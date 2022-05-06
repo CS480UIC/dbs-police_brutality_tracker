@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Infractions Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,18 +21,26 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Infractions Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	victim_name    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	infractions_id    :<input type="text" name="infractions_id" value="${infractions.infractions_id }" disabled/>
 	<br/>
-	victim_id：<input type="text" name="password" value="${entity1.password }" disabled/>
+	date ：<input type="text" name="password" value="${infractions.date }" disabled/>
 	<br/>
-	ethnicity	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	officer_involved	：<input type="text" name="officer_involved" value="${infractions.officer_involved }" disabled/>
 	<br/>
-	gender	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	force_type	：<input type="text" name="force_type" value="${infractions.force_type }" disabled/>
 	<br/>
-	address	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	victim	：<input type="text" name="victim" value="${infractions.victim }" disabled/>
+	<br/>
+	reported_by	：<input type="text" name="reported_by" value="${infractions.reported_by }" disabled/>
+	<br/>
+	location	：<input type="text" name="location" value="${infractions.location }" disabled/>
+	<br/>
+	description	：<input type="text" name="descrition" value="${infractions.description }" disabled/>
+	<br/>
+	count	：<input type="text" name="count" value="${infractions.count }" disabled/>
 	<br/>
 </form>
 

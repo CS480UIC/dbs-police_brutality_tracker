@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import entity1.domain.Entity1;
+
 //import java.util.ArrayList;
 //import java.util.List;
 
@@ -37,16 +39,53 @@ public class IEntityDao {
 	 * @throws InstantiationException 
 	 */
 	
+	public IEntity findByID(String ID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		IEntity IEntity = new IEntity();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
+		    String sql = "select * from infractions where infractions_id = ?";
+		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setString(1,ID);
+		    ResultSet resultSet = preparestatement.executeQuery();
+
+		    while(resultSet.next()){
+		    	String infID= resultSet.getString("username");
+		    	if(infID.equals(ID)){
+		    		IEntity.setInfractionCount(resultSet.getString("count"));
+		    		IEntity.setInfractionDate(resultSet.getString("date"));
+		    		IEntity.setInfractionDesc(resultSet.getString("description"));
+		    		IEntity.setInfractionForce(resultSet.getString("force_type"));
+		    		IEntity.setInfractionID(resultSet.getString("infractions_id"));
+		    		IEntity.setInfractionLocation(resultSet.getString("location"));
+		    		IEntity.setInfractionOfficer(resultSet.getString("officer_involved"));
+		    		IEntity.setInfractionReporter(resultSet.getString("reported_by"));
+		    		IEntity.setInfractionVictim(resultSet.getString("victim"));
+		    	}
+		    }
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return IEntity;
+	}	
+	
 	public void add(IEntity form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			String sql = "insert into infractions (infractions_id, date, officer_involved, force_type, victim, reported_by, location, description) values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+			preparestatement.setString(1,form.getInfractionID());
+			preparestatement.setString(2,form.getInfractionDate());
+			preparestatement.setString(3,form.getInfractionOfficer());
+			preparestatement.setString(4,form.getInfractionForce());
+		    preparestatement.setString(5,form.getInfractionVictim());
+		    preparestatement.setString(6,form.getInfractionReporter());
+		    preparestatement.setString(7,form.getInfractionLocation());
+		    preparestatement.setString(8,form.getInfractionDesc());
+		    //preparestatement.setString(9,form.getInfractionCount());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
