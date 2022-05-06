@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import infractions.dao.IEntityDao;
+import infractions.domain.IEntity;
 
 
 /**
@@ -36,12 +36,12 @@ public class IEntityServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Entity1Dao entity1Dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		IEntityDao entity1Dao = new IEntityDao();
+		IEntity entity1 = null;
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByUsername(request.getParameter("username"));
+				entity1 = entity1Dao.findByUsername(request.getParameter("id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,20 +50,20 @@ public class IEntityServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(entity1.getUsername()!=null){
+			if(entity1.getInfractionID()!=null){
 						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+						request.setAttribute("infraction", entity1);
+						request.getRequestDispatcher("/jsps/infractions/infractions_delete_output.jsp").forward(request, response);			
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/infractions/infractions_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1Dao.delete(request.getParameter("username"));
+				entity1Dao.delete(request.getParameter("id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -72,7 +72,7 @@ public class IEntityServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/infractions/infractions_read_output.jsp").forward(request, response);
 		}
 	}
 }

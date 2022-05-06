@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Infraction</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,23 +21,29 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete Infraction</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/InfractionsServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	victim_name   :<input type="text" name="username" value="${entity1.username }" disabled/>
+		<input type="hidden" name="id" value="${infractions.username }"/>
+	infraction_id   :<input type="text" name="id" value="${infractions.infraction_id }" disabled/>
 	<br/>
-	
-	victim_id：<input type="text" name="password" value="${entity1.password }" disabled/>
+	date   :<input type="text" name="date" value="${infractions.date }" disabled/>
 	<br/>
-	ethnicity	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	officer_involved   :<input type="text" name="officer" value="${infractions.officer_involved }" disabled/>
 	<br/>
-	gender	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	force_type   :<input type="text" name="force" value="${infractions.force_type }" disabled/>
 	<br/>
-	address	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	victim   :<input type="text" name="victim" value="${infractions.victim }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	reported_by   :<input type="text" name="reporter" value="${infractions.reported_by }" disabled/>
+	<br/>
+	location   :<input type="text" name="location" value="${infractions.location }" disabled/>
+	<br/>
+	description   :<input type="text" name="desc" value="${infractions.description }" disabled/>
+	<br/>
+	<br/>
+	<input type="submit" value="Delete Infraction"/>
 </form>
 
 </body>

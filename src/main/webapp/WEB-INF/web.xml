@@ -49,6 +49,50 @@
     <url-pattern>/Entity1ServletDelete</url-pattern>
   </servlet-mapping>
   
+      <servlet>
+    <description></description>
+    <display-name>VictimsServletDelete</display-name>
+    <servlet-name>VictimsServletDelete</servlet-name>
+    <servlet-class>victims.web.servlet.VEntityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VictimsServletDelete</servlet-name>
+    <url-pattern>/VictimsServletDelete</url-pattern>
+  </servlet-mapping>
+  
+        <servlet>
+    <description></description>
+    <display-name>OfficersServletDelete</display-name>
+    <servlet-name>OfficersServletDelete</servlet-name>
+    <servlet-class>policeofficers.web.servlet.POEntityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OfficersServletDelete</servlet-name>
+    <url-pattern>/OfficersServletDelete</url-pattern>
+  </servlet-mapping>
+  
+          <servlet>
+    <description></description>
+    <display-name>ForceServletDelete</display-name>
+    <servlet-name>ForceServletDelete</servlet-name>
+    <servlet-class>forcetype.web.servlet.FEntityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForceServletDelete</servlet-name>
+    <url-pattern>/ForceServletDelete</url-pattern>
+  </servlet-mapping>
+  
+          <servlet>
+    <description></description>
+    <display-name>InfractionsServletDelete</display-name>
+    <servlet-name>InfractionsServletDelete</servlet-name>
+    <servlet-class>infractions.web.servlet.IEntityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InfractionsServletDelete</servlet-name>
+    <url-pattern>/InfractionsServletDelete</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>UserServletRegister</display-name>

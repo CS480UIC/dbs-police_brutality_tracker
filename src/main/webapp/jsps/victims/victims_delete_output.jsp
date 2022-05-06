@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Victim</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,23 +21,23 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete Victim</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/VictimServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	victim_name   :<input type="text" name="username" value="${entity1.username }" disabled/>
+		<input type="hidden" name="id" value="${victim.victim_id }"/>
+	victim_name   :<input type="text" name="name" value="${victim.victim_name }" disabled/>
 	<br/>
 	
-	victim_id：<input type="text" name="password" value="${entity1.password }" disabled/>
+	victim_id：<input type="text" name="id" value="${victim.victim_id }" disabled/>
 	<br/>
-	ethnicity	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	ethnicity	：<input type="text" name="ethnicity" value="${victim.ethnicity }" disabled/>
 	<br/>
-	gender	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	gender	：<input type="text" name="gender" value="${victim.gender }" disabled/>
 	<br/>
-	address	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	address	：<input type="text" name="address" value="${victim.address }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	<input type="submit" value="Delete Victim"/>
 </form>
 
 </body>

@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Delete Force</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+  <h1>Delete Infractions</h1>
+<form action="<c:url value='/InfractionsServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete infraction_id   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Delete infraction_id   :<input type="text" name="id" value="${form.id }"/>
+	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	<input type="submit" value="Delete Infractions"/>
 </form>
   </body>
 </html>

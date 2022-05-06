@@ -86,14 +86,14 @@ public class VEntityDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
 			
-			String sql = "delete from entity1 where username = ?";
+			String sql = "delete from victims where victim_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1,Integer.parseInt(sql));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

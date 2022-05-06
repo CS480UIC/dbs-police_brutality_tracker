@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Force</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,21 +21,17 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete Force</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/ForceServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	victim_name   :<input type="text" name="username" value="${entity1.username }" disabled/>
+		<input type="hidden" name="id" value="${force.id }"/>
+	force_id   :<input type="text" name="id" value="${force.id }" disabled/>
 	<br/>
-	
-	victim_id：<input type="text" name="password" value="${entity1.password }" disabled/>
+	force_used   :<input type="text" name="type" value="${force.used }" disabled/>
 	<br/>
-	ethnicity	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	description   :<input type="text" name="desc" value="${force.description }" disabled/>
 	<br/>
-	gender	：<input type="text" name="email" value="${entity1.email }" disabled/>
-	<br/>
-	address	：<input type="text" name="email" value="${entity1.email }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Entity1"/>
 </form>
