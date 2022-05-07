@@ -35,7 +35,7 @@
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/PoliceOfficersServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="username" value="${police_officers.getOfficerID() }"/>
 	officer_name    :<input type="text" name="name" value="${police_officers.getOfficerName() }" />

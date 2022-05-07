@@ -37,7 +37,7 @@
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/VictimsServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="username" value="${victims.getVictimName()}"/>
 	victim_name   :<input type="text" name="name" value="${victims.getVictimName() }" />

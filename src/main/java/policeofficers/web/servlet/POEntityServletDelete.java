@@ -52,7 +52,7 @@ public class POEntityServletDelete extends HttpServlet {
 		
 			if(entity1.getOfficerID()!=null){
 						System.out.println(entity1);
-						request.setAttribute("police_officer", entity1);
+						request.setAttribute("police_officers", entity1);
 						request.getRequestDispatcher("/jsps/police_officers/police_officers_delete_output.jsp").forward(request, response);			
 				}
 				else{

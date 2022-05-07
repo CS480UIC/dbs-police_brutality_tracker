@@ -23,7 +23,7 @@
   <body>
   <h1>Delete police_officers</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/PoliceOfficersServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="id" value="${police_officers.getOfficerID() }"/>
 	officer_name    :<input type="text" name="name" value="${police_officers.getOfficerName() }" disabled/>

@@ -50,10 +50,10 @@ public class POEntityServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setOfficerID(info.get(0));
-		form.setOfficerName(info.get(1));
+		form.setOfficerID(info.get(1));
+		form.setOfficerName(info.get(0));
 		form.setOfficerDepartment(info.get(2));		
-		form.setOfficerRank(info.get(4));	
+		form.setOfficerRank(info.get(3));	
 		
 		try {
 			entity1service.create(form);

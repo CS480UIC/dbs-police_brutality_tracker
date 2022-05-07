@@ -76,11 +76,11 @@ public class VEntityServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setVictimID(info.get(2));
-			form.setVictimName(info.get(3));
+			form.setVictimID(info.get(3));
+			form.setVictimName(info.get(2));
 			form.setVictimEthnicity(info.get(4));
-			form.setVictimAddress(info.get(5));
-			form.setVictimGender(info.get(6));
+			form.setVictimAddress(info.get(6));
+			form.setVictimGender(info.get(5));
 
 			try {
 				entity1dao.update(form);

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Force</title>
+    <title>Read Entity Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,20 +21,17 @@
   </head>
   
   <body>
-  <h1>Delete Force</h1>
+  <h1>Read Entity Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/ForceServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="id" value="${force.getForceID() }"/>
-	force_id   :<input type="text" name="id" value="${force.getForceID() }" disabled/>
+<form>
+	force_id   :<input type="text" name="id" value="${force_type.getForceID() }" disabled/>
 	<br/>
-	force_used   :<input type="text" name="force_used" value="${force.getForceUsed()}" disabled/>
+	force_used   :<input type="text" name="force_used" value="${force_type.getForceUsed()}" disabled/>
 	<br/>
-	description   :<input type="text" name="desc" value="${force.getForceDesc() }" disabled/>
+	description   :<input type="text" name="desc" value="${force_type.getForceDesc() }" disabled/>
 	<br/>
-	<br/>
-	<input type="submit" value="Delete Entity1"/>
 </form>
 
+<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
 </body>
 </html>

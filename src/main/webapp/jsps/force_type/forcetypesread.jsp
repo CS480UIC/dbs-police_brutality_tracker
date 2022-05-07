@@ -23,7 +23,7 @@
   <body>
   <h1>Read Entity1</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/ForceTypesServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	force_id    :<input type="text" name="username" value="${form.force_id }"/>
 	<span style="color: red; font-weight: 900">${errors.force_id }</span>

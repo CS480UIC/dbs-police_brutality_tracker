@@ -18,10 +18,10 @@
 	</tr>
 <c:forEach items="${UserList}" var="user">
 	<tr>
-		<td>${user.officer_id}</td>
-		<td>${user.officer_name}</td>
-		<td>${user.department}</td>
-		<td>${user.officer_rank}</td>
+		<td>${user.getOfficerID()}</td>
+		<td>${user.getOfficerName()}</td>
+		<td>${user.getOfficerDepartment()}</td>
+		<td>${user.getOfficerRank()}</td>
 	</tr>
 </c:forEach>
 </table>

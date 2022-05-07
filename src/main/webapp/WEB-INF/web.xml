@@ -54,7 +54,7 @@
     <description></description>
     <display-name>ForceTypesServletCreate</display-name>
     <servlet-name>ForceTypesServletCreate</servlet-name>
-    <servlet-class>forcetypes.web.servlet.FTEntityServletCreate</servlet-class>
+    <servlet-class>forcetype.web.servlet.FTEntityServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ForceTypesServletCreate</servlet-name>
@@ -65,7 +65,7 @@
     <description></description>
     <display-name>ForceTypesServletRead</display-name>
     <servlet-name>ForceTypesServletRead</servlet-name>
-    <servlet-class>forcetypes.web.servlet.FTEntityServletRead</servlet-class>
+    <servlet-class>forcetype.web.servlet.FTEntityServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ForceTypesServletRead</servlet-name>
@@ -78,7 +78,7 @@
     <description></description>
     <display-name>ForceTypesServletUpdate</display-name>
     <servlet-name>ForceTypesServletUpdate</servlet-name>
-    <servlet-class>forcetypes.web.servlet.FTEntityServletUpdate</servlet-class>
+    <servlet-class>forcetype.web.servlet.FTEntityServletUpdate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ForceTypesServletUpdate</servlet-name>
@@ -90,7 +90,7 @@
     <description></description>
     <display-name>ForceTypesServletDelete</display-name>
     <servlet-name>ForceTypesServletDelete</servlet-name>
-    <servlet-class>forcetypes.web.servlet.FTEntityServletDelete</servlet-class>
+    <servlet-class>forcetype.web.servlet.FTEntityServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ForceTypesServletDelete</servlet-name>

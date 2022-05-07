@@ -68,7 +68,7 @@ public class POEntityDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?,?)";
+			String sql = "insert into police_officers values(?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,Integer.parseInt(form.getOfficerID()));
 		    preparestatement.setString(2,form.getOfficerName());

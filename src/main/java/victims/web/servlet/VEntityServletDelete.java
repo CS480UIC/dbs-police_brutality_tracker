@@ -52,7 +52,7 @@ public class VEntityServletDelete extends HttpServlet {
 		
 			if(entity1.getVictimID()!=null){
 						System.out.println(entity1);
-						request.setAttribute("victim", entity1);
+						request.setAttribute("victims", entity1);
 						request.getRequestDispatcher("/jsps/victims/victims_delete_output.jsp").forward(request, response);			
 				}
 				else{

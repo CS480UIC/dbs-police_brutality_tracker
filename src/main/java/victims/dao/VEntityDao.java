@@ -43,7 +43,7 @@ public class VEntityDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
-		    String sql = "select * from victims where victims_id=?";
+		    String sql = "select * from victims where victim_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    System.out.println(id);
 		    preparestatement.setInt(1,Integer.parseInt(id));
@@ -73,8 +73,8 @@ public class VEntityDao {
 			
 			String sql = "insert into victims values(?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-			preparestatement.setInt(1,Integer.parseInt(form.getVictimID()));
-		    preparestatement.setString(2,form.getVictimName());
+			preparestatement.setInt(2,Integer.parseInt(form.getVictimID()));
+		    preparestatement.setString(1,form.getVictimName());
 		    preparestatement.setString(3,form.getVictimEthnicity());
 		    preparestatement.setString(4,form.getVictimAddress());
 		    preparestatement.setString(5,form.getVictimGender());
@@ -126,7 +126,7 @@ public class VEntityDao {
 			
 			String sql = "delete from victims where victim_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,Integer.parseInt(sql));
+		    preparestatement.setInt(1,Integer.parseInt(id));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

@@ -23,7 +23,7 @@
   <body>
   <h1>Delete Victim</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/VictimServletDelete'/>" method="post">
+<form action="<c:url value='/VictimsServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="id" value="${victims.getVictimID() }"/>
 	victim_name   :<input type="text" name="name" value="${victims.getVictimName() }" disabled/>

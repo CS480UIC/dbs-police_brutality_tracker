@@ -76,8 +76,8 @@ public class POEntityServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setOfficerID(info.get(2));
-			form.setOfficerName(info.get(3));
+			form.setOfficerID(info.get(3));
+			form.setOfficerName(info.get(2));
 			form.setOfficerDepartment(info.get(4));
 			form.setOfficerRank(info.get(5));
 
