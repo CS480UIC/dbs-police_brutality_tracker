@@ -2,85 +2,6 @@
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>CS480 Demo</display-name>
-    <servlet>
-    <description></description>
-    <display-name>Entity1ServletCreate</display-name>
-    <servlet-name>Entity1ServletCreate</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletCreate</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Entity1ServletCreate</servlet-name>
-    <url-pattern>/Entity1ServletCreate</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <description></description>
-    <display-name>Entity1ServletRead</display-name>
-    <servlet-name>Entity1ServletRead</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletRead</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Entity1ServletRead</servlet-name>
-    <url-pattern>/Entity1ServletRead</url-pattern>
-  </servlet-mapping>
-  
-  
-  
-    <servlet>
-    <description></description>
-    <display-name>Entity1ServletUpdate</display-name>
-    <servlet-name>Entity1ServletUpdate</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletUpdate</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Entity1ServletUpdate</servlet-name>
-    <url-pattern>/Entity1ServletUpdate</url-pattern>
-  </servlet-mapping>
-  
-  
-    <servlet>
-    <description></description>
-    <display-name>Entity1ServletDelete</display-name>
-    <servlet-name>Entity1ServletDelete</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletDelete</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Entity1ServletDelete</servlet-name>
-    <url-pattern>/Entity1ServletDelete</url-pattern>
-  </servlet-mapping>
-  
-      <servlet>
-    <description></description>
-    <display-name>VictimsServletDelete</display-name>
-    <servlet-name>VictimsServletDelete</servlet-name>
-    <servlet-class>victims.web.servlet.VEntityServletDelete</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>VictimsServletDelete</servlet-name>
-    <url-pattern>/VictimsServletDelete</url-pattern>
-  </servlet-mapping>
-  
-        <servlet>
-    <description></description>
-    <display-name>OfficersServletDelete</display-name>
-    <servlet-name>OfficersServletDelete</servlet-name>
-    <servlet-class>policeofficers.web.servlet.POEntityServletDelete</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>OfficersServletDelete</servlet-name>
-    <url-pattern>/OfficersServletDelete</url-pattern>
-  </servlet-mapping>
-  
-          <servlet>
-    <description></description>
-    <display-name>ForceServletDelete</display-name>
-    <servlet-name>ForceServletDelete</servlet-name>
-    <servlet-class>forcetype.web.servlet.FEntityServletDelete</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ForceServletDelete</servlet-name>
-    <url-pattern>/ForceServletDelete</url-pattern>
-  </servlet-mapping>
   
 <servlet>
     <description></description>
@@ -127,6 +48,147 @@
   <servlet-mapping>
     <servlet-name>InfractionsServletDelete</servlet-name>
     <url-pattern>/InfractionsServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ForceTypesServletCreate</display-name>
+    <servlet-name>ForceTypesServletCreate</servlet-name>
+    <servlet-class>forcetypes.web.servlet.FTEntityServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForceTypesServletCreate</servlet-name>
+    <url-pattern>/ForceTypesServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ForceTypesServletRead</display-name>
+    <servlet-name>ForceTypesServletRead</servlet-name>
+    <servlet-class>forcetypes.web.servlet.FTEntityServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForceTypesServletRead</servlet-name>
+    <url-pattern>/ForceTypesServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>ForceTypesServletUpdate</display-name>
+    <servlet-name>ForceTypesServletUpdate</servlet-name>
+    <servlet-class>forcetypes.web.servlet.FTEntityServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForceTypesServletUpdate</servlet-name>
+    <url-pattern>/ForceTypesServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>ForceTypesServletDelete</display-name>
+    <servlet-name>ForceTypesServletDelete</servlet-name>
+    <servlet-class>forcetypes.web.servlet.FTEntityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForceTypesServletDelete</servlet-name>
+    <url-pattern>/ForceTypesServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>PoliceOfficersServletCreate</display-name>
+    <servlet-name>PoliceOfficersServletCreate</servlet-name>
+    <servlet-class>policeofficers.web.servlet.POEntityServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PoliceOfficersServletCreate</servlet-name>
+    <url-pattern>/PoliceOfficersServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>PoliceOfficersServletRead</display-name>
+    <servlet-name>PoliceOfficersServletRead</servlet-name>
+    <servlet-class>policeofficers.web.servlet.POEntityServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PoliceOfficersServletRead</servlet-name>
+    <url-pattern>/PoliceOfficersServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>PoliceOfficersServletUpdate</display-name>
+    <servlet-name>PoliceOfficersServletUpdate</servlet-name>
+    <servlet-class>policeofficers.web.servlet.POEntityServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PoliceOfficersServletUpdate</servlet-name>
+    <url-pattern>/PoliceOfficersServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>PoliceOfficersServletDelete</display-name>
+    <servlet-name>PoliceOfficersServletDelete</servlet-name>
+    <servlet-class>policeofficers.web.servlet.POEntityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PoliceOfficersServletDelete</servlet-name>
+    <url-pattern>/PoliceOfficersServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>VictimsServletCreate</display-name>
+    <servlet-name>VictimsServletCreate</servlet-name>
+    <servlet-class>victims.web.servlet.VEntityServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VictimsServletCreate</servlet-name>
+    <url-pattern>/VictimsServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>VictimsServletRead</display-name>
+    <servlet-name>VictimsServletRead</servlet-name>
+    <servlet-class>victims.web.servlet.VEntityServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VictimsServletRead</servlet-name>
+    <url-pattern>/VictimsServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>VictimsServletUpdate</display-name>
+    <servlet-name>VictimsServletUpdate</servlet-name>
+    <servlet-class>victims.web.servlet.VEntityServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VictimsServletUpdate</servlet-name>
+    <url-pattern>/VictimsServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>VictimsServletDelete</display-name>
+    <servlet-name>VictimsServletDelete</servlet-name>
+    <servlet-class>victims.web.servlet.VEntityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VictimsServletDelete</servlet-name>
+    <url-pattern>/VictimsServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>

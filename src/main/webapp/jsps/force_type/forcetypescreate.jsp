@@ -22,15 +22,15 @@
   
   <body>
   <h1>Create Force</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	force    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/ForceTypesServletCreate'/>" method="post">
+	force_id   :<input type="text" name="id" value="${force.getForceID() }" />
+	<span style="color: red; font-weight: 900">${errors.force_id }</span>
 	<br/>
-	force_id：<input type="text" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	force_used   :<input type="text" name="force_used" value="${force.getForceUsed()}" />
+	<span style="color: red; font-weight: 900">${errors.force_used }</span>
 	<br/>
-	description	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	description   :<input type="text" name="desc" value="${force.getForceDesc() }" />
+	<span style="color: red; font-weight: 900">${errors.description }</span>
 	<br/>
 	<input type="submit" value="Create Force_Type"/>
 </form>

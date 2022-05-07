@@ -25,12 +25,12 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/ForceServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="id" value="${force.id }"/>
-	force_id   :<input type="text" name="id" value="${force.id }" disabled/>
+		<input type="hidden" name="id" value="${force.getForceID() }"/>
+	force_id   :<input type="text" name="id" value="${force.getForceID() }" disabled/>
 	<br/>
-	force_used   :<input type="text" name="type" value="${force.used }" disabled/>
+	force_used   :<input type="text" name="force_used" value="${force.getForceUsed()}" disabled/>
 	<br/>
-	description   :<input type="text" name="desc" value="${force.description }" disabled/>
+	description   :<input type="text" name="desc" value="${force.getForceDesc() }" disabled/>
 	<br/>
 	<br/>
 	<input type="submit" value="Delete Entity1"/>

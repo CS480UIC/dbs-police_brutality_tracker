@@ -24,31 +24,32 @@
   <h1>Update Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	officer_name    :<input type="text" name="username1" value="${entity1.username }" disabled/>
+	officer_name    :<input type="text" name="name" value="${police_officers.getOfficerName() }" disabled/>
 	<br/>
 	
-	officer_id：<input type="text" name="password1" value="${entity1.password }" disabled />
+	officer_id：<input type="text" name="id" value="${police_officers.getOfficerID() }" disabled/>
 	<br/>
-	department	：<input type="text" name="email1" value="${entity1.email }" disabled/>
+	department	：<input type="text" name="department" value="${police_officers.getOfficerDepartment() }" disabled/>
 	<br/>
-	rank	：<input type="text" name="email1" value="${entity1.email }" disabled/>
+	rank	：<input type="text" name="rank" value="${police_officers.getOfficerRank() }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${entity1.username }"/>
-	officer_name：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="username" value="${police_officers.getOfficerID() }"/>
+	officer_name    :<input type="text" name="name" value="${police_officers.getOfficerName() }" />
+	<span style="color: red; font-weight: 900">${errors.officer_name }</span>
 	<br/>
-	officer_id	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	
+	officer_id：<input type="text" name="id" value="${police_officers.getOfficerID() }" />
+	<span style="color: red; font-weight: 900">${errors.officer_id }</span>
 	<br/>
-	department	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	department	：<input type="text" name="department" value="${police_officers.getOfficerDepartment() }" />
+	<span style="color: red; font-weight: 900">${errors.department }</span>
 	<br/>
-	rank	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	rank	：<input type="text" name="rank" value="${police_officers.getOfficerRank() }" />
+	<span style="color: red; font-weight: 900">${errors.rank }</span>
 	<br/>
 	<input type="submit" value="Update Entity1"/>
 </form>

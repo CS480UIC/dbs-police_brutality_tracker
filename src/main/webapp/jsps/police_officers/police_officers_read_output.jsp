@@ -24,13 +24,14 @@
   <h1>Read Entity Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	officer_rank    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	officer_name    :<input type="text" name="name" value="${police_officers.getOfficerName() }" disabled/>
 	<br/>
-	officer_id：<input type="text" name="password" value="${entity1.password }" disabled/>
+	
+	officer_id：<input type="text" name="id" value="${police_officers.getOfficerID() }" disabled/>
 	<br/>
-	department	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	department	：<input type="text" name="department" value="${police_officers.getOfficerDepartment() }" disabled/>
 	<br/>
-	rank	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	rank	：<input type="text" name="rank" value="${police_officers.getOfficerRank() }" disabled/>
 	<br/>
 </form>
 

@@ -24,15 +24,11 @@
   <h1>Read Entity Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	victim_name    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	force_id   :<input type="text" name="id" value="${force.getForceID() }" disabled/>
 	<br/>
-	victim_id：<input type="text" name="password" value="${entity1.password }" disabled/>
+	force_used   :<input type="text" name="force_used" value="${force.getForceUsed()}" disabled/>
 	<br/>
-	ethnicity	：<input type="text" name="email" value="${entity1.email }" disabled/>
-	<br/>
-	gender	：<input type="text" name="email" value="${entity1.email }" disabled/>
-	<br/>
-	address	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	description   :<input type="text" name="desc" value="${force.getForceDesc() }" disabled/>
 	<br/>
 </form>
 

@@ -22,18 +22,19 @@
   
   <body>
   <h1>police_officers Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	officer_name   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/PoliceOfficersServletCreate'/>" method="post">
+	officer_name    :<input type="text" name="name" value="${police_officers.getOfficerName() }" />
+	<span style="color: red; font-weight: 900">${errors.officer_name }</span>
 	<br/>
-	officer_id：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	
+	officer_id：<input type="text" name="id" value="${police_officers.getOfficerID() }" />
+	<span style="color: red; font-weight: 900">${errors.officer_id }</span>
 	<br/>
-	department	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	department	：<input type="text" name="department" value="${police_officers.getOfficerDepartment() }" />
+	<span style="color: red; font-weight: 900">${errors.department }</span>
 	<br/>
-	rank	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	rank	：<input type="text" name="rank" value="${police_officers.getOfficerRank() }" />
+	<span style="color: red; font-weight: 900">${errors.rank }</span>
 	<br/>
 	<input type="submit" value="Create police_officers"/>
 </form>

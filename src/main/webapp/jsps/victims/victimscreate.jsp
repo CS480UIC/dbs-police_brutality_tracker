@@ -22,21 +22,22 @@
   
   <body>
   <h1>victims Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	victim_name    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/VictimsServletCreate'/>" method="post">
+	victim_name   :<input type="text" name="name" value="${victims.getVictimName() }" />
+	<span style="color: red; font-weight: 900">${errors.victim_name }</span>
 	<br/>
-	victim_id：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	
+	victim_id：<input type="text" name="id" value="${victims.getVictimID() }" />
+	<span style="color: red; font-weight: 900">${errors.victim_id }</span>
 	<br/>
-	ethnicity	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	ethnicity	：<input type="text" name="ethnicity" value="${victims.getVictimEthnicity() }" />
+	<span style="color: red; font-weight: 900">${errors.ethnicity }</span>
 	<br/>
-	gender	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	gender	：<input type="text" name="gender" value="${victims.getVictimGender() }" />
+	<span style="color: red; font-weight: 900">${errors.gender }</span>
 	<br/>
-	address	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	address	：<input type="text" name="address" value="${victims.getVictimAddress() }" />
+	<span style="color: red; font-weight: 900">${errors.address }</span>
 	<br/>
 	<input type="submit" value="Create victims"/>
 </form>

@@ -25,15 +25,15 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="id" value="${entity1.username }"/>
-	officer_name    :<input type="text" name="name" value="${entity1.officer_name }" disabled/>
+		<input type="hidden" name="id" value="${police_officers.getOfficerID() }"/>
+	officer_name    :<input type="text" name="name" value="${police_officers.getOfficerName() }" disabled/>
 	<br/>
 	
-	officer_id：<input type="text" name="id" value="${entity1.officer_id }" disabled/>
+	officer_id：<input type="text" name="id" value="${police_officers.getOfficerID() }" disabled/>
 	<br/>
-	department	：<input type="text" name="department" value="${entity1.department }" disabled/>
+	department	：<input type="text" name="department" value="${police_officers.getOfficerDepartment() }" disabled/>
 	<br/>
-	rank	：<input type="text" name="rank" value="${entity1.rank }" disabled/>
+	rank	：<input type="text" name="rank" value="${police_officers.getOfficerRank() }" disabled/>
 	<br/>
 	<input type="submit" value="Delete police_officers"/>
 </form>

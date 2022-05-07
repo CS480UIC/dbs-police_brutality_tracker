@@ -25,17 +25,17 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/VictimServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="id" value="${victim.victim_id }"/>
-	victim_name   :<input type="text" name="name" value="${victim.victim_name }" disabled/>
+		<input type="hidden" name="id" value="${victims.getVictimID() }"/>
+	victim_name   :<input type="text" name="name" value="${victims.getVictimName() }" disabled/>
 	<br/>
 	
-	victim_id：<input type="text" name="id" value="${victim.victim_id }" disabled/>
+	victim_id：<input type="text" name="id" value="${victims.getVictimID() }" disabled/>
 	<br/>
-	ethnicity	：<input type="text" name="ethnicity" value="${victim.ethnicity }" disabled/>
+	ethnicity	：<input type="text" name="ethnicity" value="${victims.getVictimEthnicity() }" disabled/>
 	<br/>
-	gender	：<input type="text" name="gender" value="${victim.gender }" disabled/>
+	gender	：<input type="text" name="gender" value="${victims.getVictimGender() }" disabled/>
 	<br/>
-	address	：<input type="text" name="address" value="${victim.address }" disabled/>
+	address	：<input type="text" name="address" value="${victims.getVictimAddress() }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Victim"/>
 </form>
