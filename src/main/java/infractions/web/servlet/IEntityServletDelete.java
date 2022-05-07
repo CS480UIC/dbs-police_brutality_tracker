@@ -52,7 +52,7 @@ public class IEntityServletDelete extends HttpServlet {
 		
 			if(entity1.getInfractionID()!=null){
 						System.out.println(entity1);
-						request.setAttribute("infraction", entity1);
+						request.setAttribute("infractions", entity1);
 						request.getRequestDispatcher("/jsps/infractions/infractions_delete_output.jsp").forward(request, response);			
 				}
 				else{

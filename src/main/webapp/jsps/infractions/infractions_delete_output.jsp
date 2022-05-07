@@ -25,22 +25,22 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/InfractionsServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="id" value="${infractions.infraction_id }"/>
-	infraction_id   :<input type="text" name="id" value="${infractions.infraction_id }" disabled/>
+		<input type="hidden" name="id" value="${infractions.getInfractionID() }"/>
+	infraction_id   :<input type="text" name="id" value="${infractions.getInfractionID()}" disabled/>
 	<br/>
-	date   :<input type="text" name="date" value="${infractions.date }" disabled/>
+	date   :<input type="text" name="date" value="${infractions.getInfractionDate() }" disabled/>
 	<br/>
-	officer_involved   :<input type="text" name="officer" value="${infractions.officer_involved }" disabled/>
+	officer_involved   :<input type="text" name="officer" value="${infractions.getInfractionOfficer() }" disabled/>
 	<br/>
-	force_type   :<input type="text" name="force" value="${infractions.force_type }" disabled/>
+	force_type   :<input type="text" name="force" value="${infractions.getInfractionForce() }" disabled/>
 	<br/>
-	victim   :<input type="text" name="victim" value="${infractions.victim }" disabled/>
+	victim   :<input type="text" name="victim" value="${infractions.getInfractionVictim() }" disabled/>
 	<br/>
-	reported_by   :<input type="text" name="reporter" value="${infractions.reported_by }" disabled/>
+	reported_by   :<input type="text" name="reporter" value="${infractions.getInfractionReporter() }" disabled/>
 	<br/>
-	location   :<input type="text" name="location" value="${infractions.location }" disabled/>
+	location   :<input type="text" name="location" value="${infractions.getInfractionLocation() }" disabled/>
 	<br/>
-	description   :<input type="text" name="desc" value="${infractions.description }" disabled/>
+	description   :<input type="text" name="desc" value="${infractions.getInfractionDesc() }" disabled/>
 	<br/>
 	<br/>
 	<input type="submit" value="Delete Infraction"/>

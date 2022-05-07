@@ -79,15 +79,14 @@ public class IEntityServletUpdate extends HttpServlet {
 //			form.setPassword(info.get(2));
 //			form.setEmail(info.get(3));
 //			form.setUsername(request.getParameter("username"));
-			
-			form.setInfractionID(request.getParameter("infraction_id"));
-			form.setInfractionDate(info.get(2));
-			form.setInfractionOfficer(info.get(3));
-			form.setInfractionForce(info.get(4));
-			form.setInfractionVictim(info.get(5));
-			form.setInfractionReporter(info.get(6));
-			form.setInfractionLocation(info.get(7));
-			form.setInfractionDesc(info.get(8));
+			form.setInfractionID(info.get(2));
+			form.setInfractionDate(info.get(3));
+			form.setInfractionOfficer(info.get(4));
+			form.setInfractionForce(info.get(5));
+			form.setInfractionVictim(info.get(6));
+			form.setInfractionReporter(info.get(7));
+			form.setInfractionLocation(info.get(8));
+			form.setInfractionDesc(info.get(9));
 
 			try {
 				entity1dao.update(form);
@@ -100,6 +99,7 @@ public class IEntityServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Updated");
+			request.setAttribute("infractions", form);
 			request.getRequestDispatcher("/jsps/infractions/infractions_read_output.jsp").forward(request, response);
 		}
 	}
