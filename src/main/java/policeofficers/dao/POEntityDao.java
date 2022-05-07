@@ -36,16 +36,44 @@ public class POEntityDao {
 	 * @throws InstantiationException 
 	 */
 	
+	public POEntity findByID(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		POEntity entity1 = new POEntity();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
+		    String sql = "select * from police_officers where officer_id=?";
+		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    System.out.println(id);
+		    preparestatement.setInt(1,Integer.parseInt(id));
+		    ResultSet resultSet = preparestatement.executeQuery();
+
+		    while(resultSet.next()){
+		    	String resultID = resultSet.getString("officer_id");
+		    	if(resultID.equals(id)){
+		    		entity1.setOfficerID(resultSet.getString("officer_id"));
+		    		entity1.setOfficerName(resultSet.getString("officer_name"));
+		    		entity1.setOfficerDepartment(resultSet.getString("department"));
+		    		entity1.setOfficerRank(resultSet.getString("officer_rank"));
+		    	}
+		    }
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return entity1;
+	}
+	
 	public void add(POEntity form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			String sql = "insert into entity1 values(?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+		    preparestatement.setInt(1,Integer.parseInt(form.getOfficerID()));
+		    preparestatement.setString(2,form.getOfficerName());
+		    preparestatement.setString(3,form.getOfficerDepartment());
+		    preparestatement.setString(4,form.getOfficerRank());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -65,11 +93,12 @@ public class POEntityDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE police_officers SET officer_name = ?, department = ?, officer_rank = ? where officer_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+		    preparestatement.setString(1,form.getOfficerName());
+		    preparestatement.setString(2,form.getOfficerDepartment());
+		    preparestatement.setString(3,form.getOfficerRank());
+		    preparestatement.setInt(4,Integer.parseInt(form.getOfficerID()));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -104,9 +133,9 @@ public class POEntityDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
-			String sql = "SELECT *\n"
-					+ "FROM police_officers\n"
-					+ "WHERE (department = 'Chicago')\n"
+			String sql = "SELECT * "
+					+ "FROM police_officers "
+					+ "WHERE (department = 'Chicago') "
 					+ "ORDER BY officer_rank";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			

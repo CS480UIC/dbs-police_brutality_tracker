@@ -41,7 +41,7 @@ public class VEntityServletDelete extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByUsername(request.getParameter("id"));
+				entity1 = entity1Dao.findByID(request.getParameter("id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -57,7 +57,7 @@ public class VEntityServletDelete extends HttpServlet {
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/victims/victims_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
@@ -72,7 +72,7 @@ public class VEntityServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/victims/victims_read_output.jsp").forward(request, response);
 		}
 	}
 }

@@ -23,8 +23,8 @@ public class POEntityService {
 	 */
 	public void create(POEntity form) throws POEntityException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		POEntity entity1 = entityDao.findByUsername(form.getUsername());
-		if(entity1.getUsername()!=null && entity1.getUsername().equals(form.getUsername())) throw new POEntityException("This user name has been registered!");
+		POEntity entity1 = entityDao.findByID(form.getOfficerID());
+		if(entity1.getOfficerID()!=null && entity1.getOfficerID().equals(form.getOfficerID())) throw new POEntityException("This user name has been registered!");
 		entityDao.add(form);
 	}
 	

@@ -38,16 +38,46 @@ public class VEntityDao {
 	 * @throws InstantiationException 
 	 */
 	
+	public VEntity findByID(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		VEntity entity1 = new VEntity();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
+		    String sql = "select * from victims where victims_id=?";
+		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    System.out.println(id);
+		    preparestatement.setInt(1,Integer.parseInt(id));
+		    ResultSet resultSet = preparestatement.executeQuery();
+
+		    while(resultSet.next()){
+		    	String resultID = resultSet.getString("victim_id");
+		    	if(resultID.equals(id)){
+		    		entity1.setVictimID(resultSet.getString("victim_id"));
+		    		entity1.setVictimName(resultSet.getString("victim_name"));
+		    		entity1.setVictimEthnicity(resultSet.getString("ethnicity"));
+		    		entity1.setVictimAddress(resultSet.getString("address"));
+		    		entity1.setVictimGender(resultSet.getString("gender"));
+		    	}
+		    }
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return entity1;
+	}
+	
 	public void add(VEntity form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			String sql = "insert into victims values(?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+			preparestatement.setInt(1,Integer.parseInt(form.getVictimID()));
+		    preparestatement.setString(2,form.getVictimName());
+		    preparestatement.setString(3,form.getVictimEthnicity());
+		    preparestatement.setString(4,form.getVictimAddress());
+		    preparestatement.setString(5,form.getVictimGender());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -67,11 +97,14 @@ public class VEntityDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE victims SET victim_name = ?, ethnicity = ?,"
+					+ " address = ?, gender = ? where victim_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+		    preparestatement.setString(1,form.getVictimName());
+			preparestatement.setString(2,form.getVictimEthnicity());
+		    preparestatement.setString(3,form.getVictimAddress());
+		    preparestatement.setString(4,form.getVictimGender());
+		    preparestatement.setInt(5,Integer.parseInt(form.getVictimID()));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -106,9 +139,9 @@ public class VEntityDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
-			String sql = "SELECT *\n"
-					+ "FROM victims\n"
-					+ "WHERE (gender = 'male')\n"
+			String sql = "SELECT * "
+					+ "FROM victims "
+					+ "WHERE (gender = 'male') "
 					+ "ORDER BY victim_name";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
@@ -134,7 +167,7 @@ public class VEntityDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
-			String sql = "SELECT LOWER(address)\n"
+			String sql = "SELECT LOWER(address) "
 					+ "FROM victims";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			

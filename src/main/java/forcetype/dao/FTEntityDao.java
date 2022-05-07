@@ -37,16 +37,42 @@ public class FTEntityDao {
 	 * @throws InstantiationException 
 	 */
 	
+	public FTEntity findByID(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		FTEntity entity1 = new FTEntity();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
+		    String sql = "select * from force_type where force_id =?";
+		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    System.out.println(id);
+		    preparestatement.setInt(1,Integer.parseInt(id));
+		    ResultSet resultSet = preparestatement.executeQuery();
+
+		    while(resultSet.next()){
+		    	String resultID = resultSet.getString("force_id");
+		    	if(resultID.equals(id)){
+		    		entity1.setForceID(resultSet.getString("force_id"));
+		    		entity1.setForceUsed(resultSet.getString("force_used"));
+		    		entity1.setForceDesc(resultSet.getString("description"));
+		    	}
+		    }
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return entity1;
+	}
+	
 	public void add(FTEntity form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			String sql = "insert into force_type values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+		    preparestatement.setInt(1,Integer.parseInt(form.getForceID()));
+		    preparestatement.setString(2,form.getForceUsed());
+		    preparestatement.setString(3,form.getForceDesc());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -66,11 +92,11 @@ public class FTEntityDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE force_type SET force_used = ?, description = ? where force_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+		    preparestatement.setString(1,form.getForceUsed());
+			preparestatement.setString(2,form.getForceDesc());
+		    preparestatement.setInt(3,Integer.parseInt(form.getForceID()));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

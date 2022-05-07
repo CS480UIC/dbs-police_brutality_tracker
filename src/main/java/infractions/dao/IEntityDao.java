@@ -149,8 +149,8 @@ public class IEntityDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
-			String sql = "SELECT COUNT(*)\n"
-					+ "FROM infractions\n"
+			String sql = "SELECT COUNT(*) "
+					+ "FROM infractions "
 					+ "WHERE (date = CURDATE())";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
@@ -172,9 +172,9 @@ public class IEntityDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
-			String sql = "SELECT force_type\n"
-					+ "FROM infractions\n"
-					+ "GROUP BY force_type\n"
+			String sql = "SELECT force_type "
+					+ "FROM infractions "
+					+ "GROUP BY force_type "
 					+ "HAVING COUNT(*) > 3";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
@@ -196,9 +196,9 @@ public class IEntityDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
-			String sql = "SELECT *\n"
-					+ "FROM infractions\n"
-					+ "WHERE EXISTS\n"
+			String sql = "SELECT * "
+					+ "FROM infractions "
+					+ "WHERE EXISTS "
 					+ "(SELECT victim_id FROM victims WHERE address IS NOT NULL)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
@@ -227,12 +227,12 @@ public class IEntityDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/policebrutalitydatabase", MySQL_user, MySQL_password);
-			String sql = "SELECT COUNT(*)\n"
-					+ "FROM (\n"
-					+ "    SELECT COUNT(*) AS NUM \n"
-					+ "    FROM infractions\n"
-					+ "    GROUP BY force_type\n"
-					+ ")\n"
+			String sql = "SELECT COUNT(*) "
+					+ "FROM ( "
+					+ "    SELECT COUNT(*) AS NUM  "
+					+ "    FROM infractions "
+					+ "    GROUP BY force_type "
+					+ ") "
 					+ "WHERE NUM >= 2";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			

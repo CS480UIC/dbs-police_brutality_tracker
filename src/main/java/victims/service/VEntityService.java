@@ -23,8 +23,8 @@ public class VEntityService {
 	 */
 	public void create(VEntity form) throws VEntityException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		VEntity entity1 = entityDao.findByUsername(form.getUsername());
-		if(entity1.getUsername()!=null && entity1.getUsername().equals(form.getUsername())) throw new VEntityException("This user name has been registered!");
+		VEntity entity1 = entityDao.findByID(form.getVictimID());
+		if(entity1.getVictimID()!=null && entity1.getVictimID().equals(form.getVictimID())) throw new VEntityException("This user name has been registered!");
 		entityDao.add(form);
 	}
 	

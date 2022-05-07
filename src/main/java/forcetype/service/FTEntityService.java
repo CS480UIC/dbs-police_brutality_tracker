@@ -21,8 +21,8 @@ public class FTEntityService {
 	 */
 	public void create(FTEntity form) throws FTEntityException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		FTEntity entity1 = entityDao.findByUsername(form.getUsername());
-		if(entity1.getUsername()!=null && entity1.getUsername().equals(form.getUsername())) throw new FTEntityException("This user name has been registered!");
+		FTEntity entity1 = entityDao.findByID(form.getForceID());
+		if(entity1.getForceID()!=null && entity1.getForceID().equals(form.getForceID())) throw new FTEntityException("This user name has been registered!");
 		entityDao.add(form);
 	}
 }
