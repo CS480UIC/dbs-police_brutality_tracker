@@ -232,8 +232,8 @@ public class IEntityDao {
 					+ "    SELECT COUNT(*) AS NUM  "
 					+ "    FROM infractions "
 					+ "    GROUP BY force_type "
-					+ ") "
-					+ "WHERE NUM >= 2";
+					+ ")AS X "
+					+ "WHERE X.NUM >= 2";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){

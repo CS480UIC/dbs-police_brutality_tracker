@@ -173,11 +173,7 @@ public class VEntityDao {
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
 				VEntity user = new VEntity();
-				user.setVictimID(resultSet.getString("victim_id"));
-	    		user.setVictimName(resultSet.getString("victim_name"));
-	    		user.setVictimEthnicity(resultSet.getString("ethnicity"));
-	    		user.setVictimGender(resultSet.getString("gender"));
-	    		user.setVictimAddress(resultSet.getString("address"));
+	    		user.setVictimAddress(resultSet.getString("LOWER(address)"));
 	    		list.add(user);
 			 }
 			connect.close();

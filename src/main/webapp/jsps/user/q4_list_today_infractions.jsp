@@ -15,7 +15,7 @@
 	</tr>
 <c:forEach items="${UserList}" var="user">
 	<tr>
-		<td>${user.count}</td>
+		<td>${user.getInfractionCount()}</td>
 	</tr>
 </c:forEach>
 </table>

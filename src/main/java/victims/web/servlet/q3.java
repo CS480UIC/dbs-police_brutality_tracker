@@ -44,7 +44,7 @@ public class q3 extends HttpServlet {
 		}
 		
 		
-		request.getRequestDispatcher("/jsps/user/q3_list_male_address.jsp").forward(request, response);
+		request.getRequestDispatcher("/jsps/user/q3_list_address.jsp").forward(request, response);
 	}
 
 }

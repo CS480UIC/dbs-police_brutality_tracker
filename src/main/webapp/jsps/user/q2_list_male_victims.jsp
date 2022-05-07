@@ -19,11 +19,11 @@
 	</tr>
 <c:forEach items="${UserList}" var="user">
 	<tr>
-		<td>${user.victim_id}</td>
-		<td>${user.victim_name}</td>
-		<td>${user.ethnicity}</td>
-		<td>${user.gender}</td>
-		<td>${user.address}</td>
+		<td>${user.getVictimID()}</td>
+		<td>${user.getVictimName()}</td>
+		<td>${user.getVictimEthnicity()}</td>
+		<td>${user.getVictimGender()}</td>
+		<td>${user.getVictimAddress()}</td>
 	</tr>
 </c:forEach>
 </table>

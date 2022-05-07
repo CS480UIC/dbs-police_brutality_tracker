@@ -15,7 +15,7 @@
 	</tr>
 <c:forEach items="${UserList}" var="user">
 	<tr>
-		<td>${user.force_type}</td>
+		<td>${user.getForceType()}</td>
 	</tr>
 </c:forEach>
 </table>
