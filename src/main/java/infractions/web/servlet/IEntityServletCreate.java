@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.domain.Entity1;
-import entity1.service.Entity1Exception;
-import entity1.service.Entity1Service;
+import infractions.domain.IEntity;
+import infractions.service.IEntityException;
+import infractions.service.IEntityService;
 
 
 /**
@@ -41,24 +41,32 @@ public class IEntityServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1Service entity1service = new Entity1Service();
+		IEntityService entity1service = new IEntityService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Entity1 form = new Entity1();
+		IEntity form = new IEntity();
 		List<String> info = new ArrayList<String>();
 
 		for(String name : paramMap.keySet()) {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUsername(info.get(0));
-		form.setPassword(info.get(1));
-		form.setEmail(info.get(2));		
+		
+		System.out.println(info);
+		
+		form.setInfractionID(info.get(0));
+		form.setInfractionDate(info.get(1));
+		form.setInfractionOfficer(info.get(2));
+		form.setInfractionForce(info.get(3));
+		form.setInfractionVictim(info.get(4));
+		form.setInfractionReporter(info.get(5));
+		form.setInfractionLocation(info.get(6));
+		form.setInfractionDesc(info.get(7));
 		
 		try {
 			entity1service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | Entity1Exception e) {
+		} catch (ClassNotFoundException | IEntityException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
 			e.printStackTrace();

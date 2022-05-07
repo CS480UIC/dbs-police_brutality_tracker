@@ -23,8 +23,8 @@ public class IEntityService {
 	 */
 	public void create(IEntity form) throws IEntityException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		IEntity entity1 = entityDao.findByUsername(form.getUsername());
-		if(entity1.getUsername()!=null && entity1.getUsername().equals(form.getUsername())) throw new IEntityException("This user name has been registered!");
+		IEntity entity1 = entityDao.findByID(form.getInfractionID());
+		if(entity1.getInfractionID()!=null && entity1.getInfractionID().equals(form.getInfractionID())) throw new IEntityException("This user name has been registered!");
 		entityDao.add(form);
 	}
 	

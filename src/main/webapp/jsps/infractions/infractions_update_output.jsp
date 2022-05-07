@@ -24,36 +24,50 @@
   <h1>Update Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	victim_name    :<input type="text" name="username1" value="${entity1.username }" disabled/>
+	infraction_id   :<input type="text" name="id" value="${infractions.getInfractionID()}" disabled/>
 	<br/>
-	
-	victim_id：<input type="text" name="password1" value="${entity1.password }" disabled />
+	date   :<input type="text" name="date" value="${infractions.getInfractionDate() }" disabled/>
 	<br/>
-	ethnicity	：<input type="text" name="email1" value="${entity1.email }" disabled/>
+	officer_involved   :<input type="text" name="officer" value="${infractions.getInfractionOfficer() }" disabled/>
 	<br/>
-	gender	：<input type="text" name="email1" value="${entity1.email }" disabled/>
+	force_type   :<input type="text" name="force" value="${infractions.getInfractionForce() }" disabled/>
 	<br/>
-	address	：<input type="text" name="email1" value="${entity1.email }" disabled/>
+	victim   :<input type="text" name="victim" value="${infractions.getInfractionVictim() }" disabled/>
+	<br/>
+	reported_by   :<input type="text" name="reporter" value="${infractions.getInfractionReporter() }" disabled/>
+	<br/>
+	location   :<input type="text" name="location" value="${infractions.getInfractionLocation() }" disabled/>
+	<br/>
+	description   :<input type="text" name="desc" value="${infractions.getInfractionDesc() }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/InfractionsServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${entity1.username }"/>
-	victim_name：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="username" value="${infractions.getInfractionID()}"/>
+	infraction_id   :<input type="text" name="id" value="${infractions.getInfractionID() }"/>
+	<span style="color: red; font-weight: 900">${errors.infraction_id }</span>
 	<br/>
-	victim_id	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	date   :<input type="text" name="date" value="${infractions.getInfractionDate() }"/>
+	<span style="color: red; font-weight: 900">${errors.date }</span>
 	<br/>
-	ethnicity	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	officer_involved   :<input type="text" name="officer" value="${infractions.getInfractionOfficer() }"/>
+	<span style="color: red; font-weight: 900">${errors.officer_involved }</span>
 	<br/>
-	gender	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	force_type   :<input type="text" name="force" value="${infractions.getInfractionForce() }"/>
+	<span style="color: red; font-weight: 900">${errors.force_type }</span>
 	<br/>
-	address	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	victim   :<input type="text" name="victim" value="${infractions.getInfractionVictim() }"/>
+	<span style="color: red; font-weight: 900">${errors.victim }</span>
+	<br/>
+	reported_by   :<input type="text" name="reporter" value="${infractions.getInfractionReporter() }"/>
+	<span style="color: red; font-weight: 900">${errors.reported_by }</span>
+	<br/>
+	location   :<input type="text" name="location" value="${infractions.getInfractionLocation() }"/>
+	<span style="color: red; font-weight: 900">${errors.location }</span>
+	<br/>
+	description   :<input type="text" name="desc" value="${infractions.getInfractionDesc() }"/>
+	<span style="color: red; font-weight: 900">${errors.description }</span>
 	<br/>
 	<input type="submit" value="Update Entity1"/>
 </form>

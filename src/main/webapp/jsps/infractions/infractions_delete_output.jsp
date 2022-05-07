@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/InfractionsServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="id" value="${infractions.username }"/>
+		<input type="hidden" name="id" value="${infractions.infraction_id }"/>
 	infraction_id   :<input type="text" name="id" value="${infractions.infraction_id }" disabled/>
 	<br/>
 	date   :<input type="text" name="date" value="${infractions.date }" disabled/>

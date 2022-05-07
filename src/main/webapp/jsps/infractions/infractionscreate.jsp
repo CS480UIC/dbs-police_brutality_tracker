@@ -22,30 +22,30 @@
   
   <body>
   <h1>Create Force</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	infraction_id    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/InfractionsServletCreate'/>" method="post">
+	infraction_id    :<input type="text" name="infraction_id" value="${form.infraction_id }"/>
+	<span style="color: red; font-weight: 900">${errors.infraction_id }</span>
 	<br/>
-	date：<input type="text" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	date：<input type="text" name="date" value="${form.date }"/>
+	<span style="color: red; font-weight: 900">${errors.date }</span>
 	<br/>
-	officer_involved：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	officer_involved：<input type="text" name="officer_involved" value="${form.officer_involved }"/>
+	<span style="color: red; font-weight: 900">${errors.officer_involved }</span>
 	<br/>
-	force_type：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	force_type：<input type="text" name="force_type" value="${form.force_type }"/>
+	<span style="color: red; font-weight: 900">${errors.force_type }</span>
 	<br/>
-	victim：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	victim：<input type="text" name="victim" value="${form.victim }"/>
+	<span style="color: red; font-weight: 900">${errors.victim }</span>
 	<br/>
-	reported_by：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	reported_by：<input type="text" name="reported_by" value="${form.reported_by }"/>
+	<span style="color: red; font-weight: 900">${errors.reported_by }</span>
 	<br/>
-	location：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	location：<input type="text" name="location" value="${form.location }"/>
+	<span style="color: red; font-weight: 900">${errors.location }</span>
 	<br/>
-	description：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	description：<input type="text" name="description" value="${form.description }"/>
+	<span style="color: red; font-weight: 900">${errors.description }</span>
 	<br/>
 	<input type="submit" value="Create Force_Type"/>
 </form>

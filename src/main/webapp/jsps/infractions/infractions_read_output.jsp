@@ -24,15 +24,21 @@
   <h1>Read Entity Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	victim_name    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	infraction_id   :<input type="text" name="id" value="${infractions.getInfractionID()}" disabled/>
 	<br/>
-	victim_id：<input type="text" name="password" value="${entity1.password }" disabled/>
+	date   :<input type="text" name="date" value="${infractions.getInfractionDate() }" disabled/>
 	<br/>
-	ethnicity	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	officer_involved   :<input type="text" name="officer" value="${infractions.getInfractionOfficer() }" disabled/>
 	<br/>
-	gender	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	force_type   :<input type="text" name="force" value="${infractions.getInfractionForce() }" disabled/>
 	<br/>
-	address	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	victim   :<input type="text" name="victim" value="${infractions.getInfractionVictim() }" disabled/>
+	<br/>
+	reported_by   :<input type="text" name="reporter" value="${infractions.getInfractionReporter() }" disabled/>
+	<br/>
+	location   :<input type="text" name="location" value="${infractions.getInfractionLocation() }" disabled/>
+	<br/>
+	description   :<input type="text" name="desc" value="${infractions.getInfractionDesc() }" disabled/>
 	<br/>
 </form>
 

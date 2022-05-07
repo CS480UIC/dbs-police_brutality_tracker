@@ -82,7 +82,43 @@
     <url-pattern>/ForceServletDelete</url-pattern>
   </servlet-mapping>
   
-          <servlet>
+<servlet>
+    <description></description>
+    <display-name>InfractionsServletCreate</display-name>
+    <servlet-name>InfractionsServletCreate</servlet-name>
+    <servlet-class>infractions.web.servlet.IEntityServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InfractionsServletCreate</servlet-name>
+    <url-pattern>/InfractionsServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>InfractionsServletRead</display-name>
+    <servlet-name>InfractionsServletRead</servlet-name>
+    <servlet-class>infractions.web.servlet.IEntityServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InfractionsServletRead</servlet-name>
+    <url-pattern>/InfractionsServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>InfractionsServletUpdate</display-name>
+    <servlet-name>InfractionsServletUpdate</servlet-name>
+    <servlet-class>infractions.web.servlet.IEntityServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InfractionsServletUpdate</servlet-name>
+    <url-pattern>/InfractionsServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
     <description></description>
     <display-name>InfractionsServletDelete</display-name>
     <servlet-name>InfractionsServletDelete</servlet-name>

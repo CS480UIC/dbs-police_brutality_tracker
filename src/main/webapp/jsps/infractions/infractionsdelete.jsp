@@ -24,8 +24,8 @@
   <h1>Delete Infractions</h1>
 <form action="<c:url value='/InfractionsServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete infraction_id   :<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+	Delete infraction_id   :<input type="text" name="id" value="${form.infraction_id }"/>
+	<span style="color: red; font-weight: 900">${errors.infraction_id }</span>
 	<br/>
 	<input type="submit" value="Delete Infractions"/>
 </form>
